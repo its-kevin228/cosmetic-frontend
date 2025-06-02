@@ -3,9 +3,11 @@
     <div v-if="isLoading" class="loader-container">
       <div class="loader"></div>
     </div>
-    <div v-else>
-      <AppNavbar />
-    </div>
+    <Transition name="fade-in" appear>
+      <div v-if="!isLoading" class="page-content">
+        <AppNavbar />
+      </div>
+    </Transition>
   </div>
 </template>
 
@@ -100,5 +102,26 @@ onMounted(() => {
   50% {
     transform: scale(1.2, 1);
   }
+}
+
+/* Animation de transition */
+.fade-in-enter-active {
+  transition: all 0.8s ease;
+}
+
+.fade-in-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fade-in-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Style optionnel pour le contenu de la page */
+.page-content {
+  min-height: 100vh;
+  width: 100%;
 }
 </style>
