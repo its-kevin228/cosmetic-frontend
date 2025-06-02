@@ -1,9 +1,10 @@
 <template>
-<div class="text-blue-500 text-2xl">
-  bjr
-</div>
+  <div class="font-sans">
+    <AppNavbar />
+   
+  </div>
 </template>
 
 <script lang="ts" setup>
-
+import AppNavbar from './components/AppNavbar.vue';
 </script>
