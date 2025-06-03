@@ -1,0 +1,131 @@
+{
+    
+  "featured":{
+    "id": 1,
+    "nom": "Soins naturels préférés de notre fondatrice",
+    "link": "/images/i19.jpeg",
+    "prix": "5 500 FCFA"
+  },
+  "products":[
+    {
+    "id": 2,
+    "nom": "Guide complet du rangement maquillage 2025",
+    "link": "/images/i2.jpeg",
+    "prix": "4 000 FCFA"
+  },
+  {
+    "id": 3,
+    "nom": "Mockup de flacons cosmétiques sur fond beige",
+    "link": "/images/i3.jpeg",
+    "prix": "6 500 FCFA"
+  },
+  {
+    "id": 4,
+    "nom": "Nettoyant visage sensible par Lara",
+    "link": "/images/i4.jpeg",
+    "prix": "3 800 FCFA"
+  },
+  {
+    "id": 5,
+    "nom": "BeShop - Template eCommerce beauté React Next JS",
+    "link": "/images/i5.jpeg",
+    "prix": "9 000 FCFA"
+  },
+  {
+    "id": 6,
+    "nom": "Speick Sun – Soin solaire minéral sans effet blanc",
+    "link": "/images/i6.jpeg",
+    "prix": "5 000 FCFA"
+  },
+  {
+    "id": 7,
+    "nom": "Gel douche doux 'ALMA' de Conseda Cosmetics",
+    "link": "/images/i7.jpeg",
+    "prix": "3 500 FCFA"
+  },
+  {
+    "id": 8,
+    "nom": "Rapport beauté d'octobre avec Perricone MD, BH Cosmetics, BECCA & plus",
+    "link": "/images/i8.jpeg",
+    "prix": "7 200 FCFA"
+  },
+  {
+    "id": 9,
+    "nom": "Photographie publicitaire de flacon de parfum",
+    "link": "/images/i9.jpeg",
+    "prix": "8 000 FCFA"
+  },
+  {
+    "id": 10,
+    "nom": "Photographie de produit de soin sur pierre",
+    "link": "/images/i10.jpeg",
+    "prix": "5 200 FCFA"
+  },
+  {
+    "id": 11,
+    "nom": "12 nouveaux produits de soin pour un été éclatant",
+    "link": "/images/i11.jpeg",
+    "prix": "6 000 FCFA"
+  },
+  {
+    "id": 12,
+    "nom": "Favoris de vitamine C de Cindy Claudia",
+    "link": "/images/i12.jpeg",
+    "prix": "4 800 FCFA"
+  },
+  {
+    "id": 13,
+    "nom": "Routine de soins corporels par Kerriii",
+    "link": "/images/i13.jpeg",
+    "prix": "5 700 FCFA"
+  },
+  {
+    "id": 14,
+    "nom": "22 rouges à lèvres rouges préférés des éditeurs d'Allure",
+    "link": "/images/i14.jpeg",
+    "prix": "3 000 FCFA"
+  },
+  {
+    "id": 15,
+    "nom": "Mousse nettoyante HOLACEUTICAS sur Behance",
+    "link": "/images/i15.jpeg",
+    "prix": "4 500 FCFA"
+  },
+  {
+    "id": 16,
+    "nom": "Obtenez une peau éclatante avec Bio-Oil",
+    "link": "/images/i16.jpeg",
+    "prix": "5 300 FCFA"
+  },
+  {
+    "id": 17,
+    "nom": "Éclat sain avec l'hydratation : écran solaire teinté CeraVe SPF 30",
+    "link": "/images/i17.jpeg",
+    "prix": "4 900 FCFA"
+  },
+  {
+    "id": 18,
+    "nom": "Désinfectants pour les mains Bisleri - Achetez en ligne",
+    "link": "/images/i18.jpeg",
+    "prix": "2 500 FCFA"
+  },
+  {
+    "id": 19,
+    "nom": "korean skincare",
+    "link": "/images/i19.jpeg",
+    "prix": "6 800 FCFA"
+  },
+  {
+    "id": 20,
+    "nom": "Cerva hyfratatoin",
+    "link": "/images/i20.jpeg",
+    "prix": "5 100 FCFA"
+  },
+  {
+    "id": 21,
+    "nom": "Mascara",
+    "link": "/images/i9.jpeg",
+    "prix": "3 300 FCFA"
+  }
+  ]
+}
