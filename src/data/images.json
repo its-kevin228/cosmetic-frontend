@@ -9,19 +9,19 @@
   "products":[
     {
     "id": 2,
-    "nom": "Guide complet du rangement maquillage 2025",
+    "nom": "rangement maquillage",
     "link": "/images/i2.jpeg",
     "prix": "4 000 FCFA"
   },
   {
     "id": 3,
-    "nom": "Mockup de flacons cosmétiques sur fond beige",
+    "nom": "Mockup de flacons",
     "link": "/images/i3.jpeg",
     "prix": "6 500 FCFA"
   },
   {
     "id": 4,
-    "nom": "Nettoyant visage sensible par Lara",
+    "nom": "Nettoyant visage",
     "link": "/images/i4.jpeg",
     "prix": "3 800 FCFA"
   },
