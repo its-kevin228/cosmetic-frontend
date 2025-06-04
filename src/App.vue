@@ -17,6 +17,7 @@
           <ProductsView />
           <AboutView />
           <ContactView />
+          <FooterView />
         </main>
       </div>
     </Transition>
@@ -30,6 +31,7 @@ import { ref, onMounted } from 'vue';
 import ProductsView from './components/ProductsView.vue';
 import AboutView from './components/AboutView.vue';
 import ContactView from './components/ContactView.vue';
+import FooterView from './components/FooterView.vue';
 
 const isLoading = ref(true);
 
