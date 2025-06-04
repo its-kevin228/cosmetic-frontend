@@ -18,21 +18,21 @@
 
                 <!-- Navigation centrale -->
                 <div class="hidden sm:flex flex-1 justify-center space-x-10 text-lg font-semibold">
-                    <a href="#" class="relative group flex items-center transition duration-300 hover:text-orange-500 hover:scale-105 py-2">
+                    <router-Link to="/" class="relative group flex items-center transition duration-300 hover:text-orange-500 hover:scale-105 py-2">
                         <HomeIcon class="mr-2 h-5 w-5 text-orange-500"/>
                         Accueil
                         <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                    <a href="#" class="relative group flex items-center transition duration-300 hover:text-orange-500 hover:scale-105 py-2">
+                    </ router-Link>
+                    <router-link to="/products" class="relative group flex items-center transition duration-300 hover:text-orange-500 hover:scale-105 py-2">
                         <ShoppingBagIcon class="mr-2 h-5 w-5 text-orange-500"/>
                         Produits
                         <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                    <a href="#" class="relative group flex items-center transition duration-300 hover:text-orange-500 hover:scale-105 py-2">
+                    </router-link>
+                    <router-link to="/about" class="relative group flex items-center transition duration-300 hover:text-orange-500 hover:scale-105 py-2">
                         <InformationCircleIcon class="mr-2 h-5 w-5 text-orange-500"/>
                         À propos
                         <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-                    </a>
+                    </router-link>
                 </div>
 
                 <!-- Barre de recherche (desktop) et bouton contact -->
@@ -49,10 +49,10 @@
                         >
                         <MagnifyingGlassIcon class="absolute left-4 top-3.5 h-5 w-5 text-orange-500"/>
                     </div>
-                    <button class="bg-orange-500 text-white px-6 py-3 rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 hover:bg-orange-400 transition duration-300 flex items-center text-base font-semibold">
+                    <router-link to="/contact" class="bg-orange-500 text-white px-6 py-3 rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 hover:bg-orange-400 transition duration-300 flex items-center text-base font-semibold">
                         <EnvelopeIcon class="mr-2 h-5 w-5 text-white"/>
                         Contact
-                    </button>
+                    </router-link>
                 </div>
 
                 <!-- Menu burger mobile -->
