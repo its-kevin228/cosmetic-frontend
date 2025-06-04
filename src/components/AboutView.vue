@@ -1,46 +1,48 @@
 <template>
-    <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 md:px-8">
-        <h1 class="text-4xl md:text-5xl font-black mb-8 text-gray-800">À Propos de Nous</h1>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-                <p class="text-lg text-gray-600 mb-6">
-                    Notre entreprise de cosmétiques est née d'une passion pour des produits naturels et efficaces. Nous
-                    croyons en la puissance des ingrédients naturels et en leur capacité à transformer votre peau.
-                </p>
-                <p class="text-lg text-gray-600 mb-6">
-                    Chaque produit que nous créons est formulé avec soin, testé rigoureusement et conçu pour offrir des
-                    résultats visibles sans compromettre la santé de votre peau ou celle de notre planète.
-                </p>
-                <p class="text-lg text-gray-600">
-                    Notre mission est simple : créer des soins de la peau exceptionnels qui sont à la fois efficaces,
-                    accessibles et respectueux de l'environnement.
-                </p>
-            </div>
-            <div class="bg-orange-100 rounded-xl p-8">
-                <h2 class="text-2xl font-bold mb-4 text-orange-600">Notre engagement</h2>
-                <ul class="space-y-4">
-                    <li class="flex items-start">
-                        <span class="bg-orange-500 text-white p-1 rounded-full mr-3 mt-1">✓</span>
-                        <span>Des ingrédients 100% naturels et biologiques</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="bg-orange-500 text-white p-1 rounded-full mr-3 mt-1">✓</span>
-                        <span>Aucun test sur les animaux</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="bg-orange-500 text-white p-1 rounded-full mr-3 mt-1">✓</span>
-                        <span>Emballages recyclables et biodégradables</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="bg-orange-500 text-white p-1 rounded-full mr-3 mt-1">✓</span>
-                        <span>Fabrication locale et responsable</span>
-                    </li>
-                </ul>
-            </div>
+  <div class="max-w-6xl mx-auto p-8">
+    <h1 class="text-4xl font-extrabold text-gray-900 mb-12">About us →</h1>
+    
+    <div class="flex flex-col lg:flex-row gap-12 items-start">
+      <!-- Colonne de gauche - Image -->
+      <div class="lg:w-1/2">
+        <img src="/images/aboutimage.jpeg" alt="Cosmetic products" class="w-full h-auto rounded-lg shadow-md">
+      </div>
+      
+      <!-- Colonne de droite - Cartes HORIZONTALES -->
+      <div class="lg:w-1/2">
+        <div class="grid grid-cols-3 gap-6">
+          <!-- Carte 1 -->
+          <div class="border border-gray-200 p-6 rounded-lg shadow-sm">
+            <div class="text-orange-500 text-5xl font-bold mb-2">100%</div>
+            <div class="text-gray-800 font-medium uppercase text-sm tracking-wide">Cruelty-Free</div>
+            <p class="text-gray-600 mt-3 text-sm">No animal testing at any production stage</p>
+          </div>
+          
+          <!-- Carte 2 -->
+          <div class="border border-gray-200 p-6 rounded-lg shadow-sm">
+            <div class="text-orange-500 text-5xl font-bold mb-2">90%</div>
+            <div class="text-gray-800 font-medium uppercase text-sm tracking-wide">Natural</div>
+            <p class="text-gray-600 mt-3 text-sm">Naturally-derived ingredients from sustainable sources</p>
+          </div>
+          
+          <!-- Carte 3 -->
+          <div class="border border-gray-200 p-6 rounded-lg shadow-sm">
+            <div class="text-orange-500 text-5xl font-bold mb-2">95%</div>
+            <div class="text-gray-800 font-medium uppercase text-sm tracking-wide">Satisfaction</div>
+            <p class="text-gray-600 mt-3 text-sm">Customers report being highly satisfied</p>
+          </div>
         </div>
+        
+        <!-- Texte supplémentaire sous les cartes -->
+        <div class="mt-8 space-y-4 text-gray-700">
+          <p>We are a passionate cosmetics retailer dedicated to providing high-quality beauty products.</p>
+          <p>We never test on animals because beauty should be ethical and kind.</p>
+          <p>Made with dermatologist-approved, paraben-free ingredients.</p>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
-
 
 <script setup>
 </script>

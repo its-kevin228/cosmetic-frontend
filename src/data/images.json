@@ -1,11 +1,26 @@
 {
     
-  "featured":{
+  "featured":[
+    {
     "id": 1,
     "nom": "Soins naturels préférés de notre fondatrice",
     "link": "/images/i19.jpeg",
     "prix": "5 500 FCFA"
   },
+  {
+    "id": 2,
+    "nom": "Soins de la peau",
+    "link": "/images/i21.jpeg",
+    "prix": "4 200 FCFA"
+  },
+  {
+    "id": 3,
+    "nom": "Maquillage",
+    "link": "/images/i22.jpeg",
+    "prix": "3 800 FCFA"
+  }
+  
+  ],
   "products":[
     {
     "id": 2,

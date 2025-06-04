@@ -71,7 +71,7 @@
                         </div>
                         <div>
                             <h3 class="text-lg font-medium mb-1">Adresse</h3>
-                            <p class="text-gray-600">15 Rue de la Beauté<br>75001 Paris, France</p>
+                            <p class="text-gray-600">15 Rue Avenue<br>Lomé, Togo</p>
                         </div>
                     </div>
 
@@ -85,7 +85,7 @@
                         </div>
                         <div>
                             <h3 class="text-lg font-medium mb-1">Téléphone</h3>
-                            <p class="text-gray-600">+33 1 23 45 67 89</p>
+                            <p class="text-gray-600">+228 93 15 88 01</p>
                         </div>
                     </div>
 
