@@ -71,7 +71,7 @@
                         </div>
                         <div>
                             <h3 class="text-lg font-medium mb-1">Adresse</h3>
-                            <p class="text-gray-600">15 Rue Avenue<br>Lomé, Togo</p>
+                            <p class="text-gray-600">Agoè<br>Lomé, Togo</p>
                         </div>
                     </div>
 

@@ -1,10 +1,19 @@
 <template>
-    <footer class="bg-transparent py-8 text-center">
-        <div class="container mx-auto px-4">
+    <footer class="bg-transparent py-8 text-center relative overflow-hidden">
+        <div class="absolute top-0 left-0 h-32 w-32 -mt-8 -ml-8 opacity-30">
+            <div class="absolute inset-0 rounded-full bg-orange-400 blur-xl animate-float-slow"></div>
+            <div class="absolute top-4 left-4 h-16 w-16 rounded-full bg-orange-300 blur-lg animate-float-medium"></div>
+        </div>
+        <div class="absolute bottom-0 right-0 h-32 w-32 -mb-8 -mr-8 opacity-30">
+            <div class="absolute inset-0 rounded-full bg-orange-400 blur-xl animate-float-medium"></div>
+            <div class="absolute bottom-4 right-4 h-20 w-20 rounded-full bg-orange-300 blur-lg animate-float-slow">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
             <!-- Logo minimaliste -->
-            <div class="mb-6">
-                <span class="text-2xl font-light text-gray-700">cosmé</span>
-                <span class="text-2xl font-bold text-orange-500">tics</span>
+            <div class="mb-6 text-3xl">
+                <span class="text-orange-500 font-boldbold"><I>Cosmetics</I></span>
             </div>
 
             <!-- Réseaux sociaux avec effets avancés -->
@@ -46,7 +55,7 @@
             </div>
 
             <!-- Ligne séparatrice subtile -->
-            <div class="h-px bg-gray-200 w-24 mx-auto mb-6"></div>
+            <div class="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent w-40 mx-auto mb-6"></div>
 
             <!-- Liens minimaux -->
             <div class="flex justify-center space-x-6 mb-6">
@@ -74,7 +83,7 @@
 
 <script>
 export default {
-    name: 'EnhancedSocialFooter'
+    name: 'FramedSocialFooter'
 }
 </script>
 
