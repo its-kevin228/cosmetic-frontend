@@ -34,6 +34,7 @@ const router = createRouter({
   scrollBehavior() {
     // Toujours défiler vers le haut lors du changement de page
     return { top: 0 }
+    
   },
 });
 

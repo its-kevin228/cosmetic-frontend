@@ -1,6 +1,6 @@
 <template>
     <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 md:px-8">
-        <h1 class="text-4xl md:text-5xl font-black mb-8 text-gray-800">Contactez-nous</h1>
+        <h1 class="text-5xl md:text-5xl  mb-8 text-gray-800 font-bold">Contactez-nous</h1>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <!-- Formulaire de contact -->
