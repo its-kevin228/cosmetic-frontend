@@ -176,7 +176,7 @@ export default {
     border-radius: 50%;
     transition: all 0.3s;
     height: 60px;
-    width: 60px;
+    width: -40px;
 }
 
 .iso-pro:hover span {
