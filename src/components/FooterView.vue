@@ -1,221 +1,166 @@
 <template>
-    <footer class="bg-transparent py-8 text-center relative overflow-hidden">
-        <div class="absolute top-0 left-0 h-32 w-32 -mt-8 -ml-8 opacity-30">
-            <div class="absolute inset-0 rounded-full bg-orange-400 blur-xl animate-float-slow"></div>
-            <div class="absolute top-4 left-4 h-16 w-16 rounded-full bg-orange-300 blur-lg animate-float-medium"></div>
-        </div>
-        <div class="absolute bottom-0 right-0 h-32 w-32 -mb-8 -mr-8 opacity-30">
-            <div class="absolute inset-0 rounded-full bg-orange-400 blur-xl animate-float-medium"></div>
-            <div class="absolute bottom-4 right-4 h-20 w-20 rounded-full bg-orange-300 blur-lg animate-float-slow">
+    <footer class="bg-gradient-to-b from-transparent to-gray-50 py-12 relative overflow-hidden">
+        <!-- Bulles décoratives -->
+        <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
+            <div
+                class="absolute top-20 left-[10%] w-16 h-16 rounded-full bg-orange-400 opacity-20 blur-xl animate-float-slow">
+            </div>
+            <div
+                class="absolute bottom-1/4 right-[15%] w-24 h-24 rounded-full bg-orange-300 opacity-15 blur-xl animate-float-medium">
             </div>
         </div>
 
-        <div class="container mx-auto px-4 relative z-10">
-            <!-- Logo minimaliste -->
-            <div class="mb-6 text-3xl">
-                <span class="text-orange-500 font-boldbold"><I>Cosmetics</I></span>
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Logo et slogan -->
+            <div class="flex flex-col items-center mb-8">
+                <span class="text-4xl font-serif italic text-orange-600 mb-2">Cosmetics</span>
+                <p class="text-gray-500 text-sm max-w-md text-center">Redéfinissez votre beauté avec nos produits
+                    d'exception</p>
             </div>
 
-            <!-- Réseaux sociaux avec effets avancés -->
-            <div class="card">
-                <ul>
-                    <!-- TikTok -->
-                    <li class="iso-pro">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <a href="#">
-                            <i class="fab fa-tiktok svg"></i>
-                        </a>
-                        <div class="text">TikTok</div>
-                    </li>
+            <!-- Réseaux sociaux -->
+            <div class="flex justify-center space-x-6 mb-8">
+                <a v-for="(social, index) in socials" :key="index" :href="social.link"
+                    class="w-12 h-12 rounded-full flex items-center justify-center bg-white shadow-md text-gray-700 transition-all duration-300 ease-out relative"
+                    :data-network="social.name.toLowerCase()" @mouseenter="hoverEffect($event)">
+                    <i :class="social.icon"></i>
+                    <span
+                        class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-2 rounded opacity-0 transition-opacity duration-200">{{
+                        social.name }}</span>
+                </a>
+            </div>
 
-                    <!-- Facebook -->
-                    <li class="iso-pro">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <a href="#">
-                            <i class="fab fa-facebook-f svg"></i>
+            <!-- Navigation -->
+            <nav class="mb-8">
+                <ul class="flex flex-wrap justify-center gap-6">
+                    <li v-for="(item, index) in navItems" :key="index">
+                        <a :href="item.link"
+                            class="text-gray-600 hover:text-orange-600 transition-colors duration-200 relative pb-1"
+                            @mouseenter="animateLink($event)">
+                            {{ item.text }}
+                            <span
+                                class="absolute bottom-0 left-0 w-0 h-px bg-orange-500 transition-all duration-300 ease-out"></span>
                         </a>
-                        <div class="text">Facebook</div>
-                    </li>
-
-                    <!-- WhatsApp -->
-                    <li class="iso-pro">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <a href="#">
-                            <i class="fab fa-whatsapp svg"></i>
-                        </a>
-                        <div class="text">WhatsApp</div>
                     </li>
                 </ul>
+            </nav>
+
+            <!-- Copyright -->
+            <div class="text-center text-xs text-gray-400">
+                <p>&copy; {{ new Date().getFullYear() }} Cosmetics. Tous droits réservés.</p>
+                <div class="mt-2">
+                    <a href="#" class="hover:text-orange-500 transition">Mentions légales</a>
+                    <span class="mx-2">•</span>
+                    <a href="#" class="hover:text-orange-500 transition">Politique de confidentialité</a>
+                </div>
             </div>
-
-            <!-- Ligne séparatrice subtile -->
-            <div class="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent w-40 mx-auto mb-6"></div>
-
-            <!-- Liens minimaux -->
-            <div class="flex justify-center space-x-6 mb-6">
-                <a href="#"
-                    class="text-gray-500 hover:text-orange-500 text-xs uppercase tracking-wider transition-colors duration-200">
-                    Confidentialité
-                </a>
-                <a href="#"
-                    class="text-gray-500 hover:text-orange-500 text-xs uppercase tracking-wider transition-colors duration-200">
-                    Conditions
-                </a>
-                <a href="#"
-                    class="text-gray-500 hover:text-orange-500 text-xs uppercase tracking-wider transition-colors duration-200">
-                    Contact
-                </a>
-            </div>
-
-            <!-- Copyright discret -->
-            <p class="text-gray-400 text-xs">
-                &copy; {{ new Date().getFullYear() }} cosmétics. Tous droits réservés.
-            </p>
         </div>
     </footer>
 </template>
 
 <script>
 export default {
-    name: 'FramedSocialFooter'
+    name: 'ModernCosmeticFooter',
+    data() {
+        return {
+            socials: [
+                { name: 'TikTok', icon: 'fab fa-tiktok', link: '#' },
+                { name: 'Facebook', icon: 'fab fa-facebook-f', link: '#' },
+                { name: 'Instagram', icon: 'fab fa-instagram', link: '#' },
+                { name: 'WhatsApp', icon: 'fab fa-whatsapp', link: '#' }
+            ],
+            navItems: [
+                { text: 'Accueil', link: '#' },
+                { text: 'Produits', link: '#' },
+                { text: 'À propos', link: '#' },
+                { text: 'Contact', link: '#' }
+            ]
+        }
+    },
+    methods: {
+        hoverEffect(event) {
+            const icons = event.currentTarget.parentElement.children;
+            Array.from(icons).forEach(icon => {
+                icon.style.transform = 'scale(0.9)';
+                icon.style.opacity = '0.7';
+            });
+            event.currentTarget.style.transform = 'scale(1.1)';
+            event.currentTarget.style.opacity = '1';
+
+            setTimeout(() => {
+                Array.from(icons).forEach(icon => {
+                    icon.style.transform = '';
+                    icon.style.opacity = '';
+                });
+            }, 300);
+        },
+        animateLink(event) {
+            const underline = event.currentTarget.querySelector('span');
+            underline.style.width = '100%';
+            event.currentTarget.style.transform = 'translateY(-2px)';
+            setTimeout(() => {
+                event.currentTarget.style.transform = '';
+            }, 200);
+        }
+    }
 }
 </script>
 
-<style scoped>
-.card {
-    max-width: fit-content;
-    margin: 0 auto 2rem;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    gap: 1rem;
-    backdrop-filter: blur(15px);
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.192),
-        inset 0 0 5px rgba(255, 255, 255, 0.274), 0 5px 5px rgba(0, 0, 0, 0.164);
-    transition: 0.5s;
-    background: rgba(255, 255, 255, 0.05);
+<style>
+@keyframes float-slow {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(2deg);
+    }
 }
 
-.card:hover {
-    animation: ease-out 5s;
-    background: rgba(173, 173, 173, 0.05);
+@keyframes float-medium {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(-2deg);
+    }
 }
 
-.card ul {
-    padding: 1rem;
-    display: flex;
-    list-style: none;
-    gap: 1.5rem;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
+.animate-float-slow {
+    animation: float-slow 8s ease-in-out infinite;
 }
 
-.card ul li {
-    cursor: pointer;
+.animate-float-medium {
+    animation: float-medium 6s ease-in-out infinite;
 }
 
-.svg {
-    transition: all 0.3s;
-    padding: 1rem;
-    height: 60px;
-    width: 60px;
-    border-radius: 100%;
-    color: rgb(255, 174, 0);
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
-        inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Couleurs des réseaux sociaux au survol */
+a[data-network="tiktok"]:hover {
+    color: white !important;
+    background-color: #EE1D52 !important;
 }
 
-.text {
-    opacity: 0;
-    border-radius: 5px;
-    padding: 5px;
-    transition: all 0.3s;
-    color: rgb(255, 174, 0);
-    background-color: rgba(255, 255, 255, 0.3);
-    position: absolute;
-    z-index: 9999;
-    box-shadow: -5px 0 1px rgba(153, 153, 153, 0.2),
-        -10px 0 1px rgba(153, 153, 153, 0.2),
-        inset 0 0 20px rgba(255, 255, 255, 0.3),
-        inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.082);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+a[data-network="facebook"]:hover {
+    color: white !important;
+    background-color: #1877F2 !important;
 }
 
-.iso-pro {
-    transition: 0.5s;
-    position: relative;
+a[data-network="instagram"]:hover {
+    color: white !important;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
 }
 
-.iso-pro:hover a>.svg {
-    transform: translate(15px, -15px);
-    border-radius: 100%;
+a[data-network="whatsapp"]:hover {
+    color: white !important;
+    background-color: #25D366 !important;
 }
 
-.iso-pro:hover .text {
-    opacity: 1;
-    transform: translate(25px, -2px) skew(-5deg);
-}
-
-.iso-pro:hover .svg {
-    transform: translate(5px, -5px);
-}
-
-.iso-pro span {
-    opacity: 0;
-    position: absolute;
-    color: rgb(255, 174, 0);
-    border-color: rgb(255, 174, 0);
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
-        inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
-    border-radius: 50%;
-    transition: all 0.3s;
-    height: 60px;
-    width: -40px;
-}
-
-.iso-pro:hover span {
-    opacity: 1;
-}
-
-.iso-pro:hover span:nth-child(1) {
-    opacity: 0.2;
-}
-
-.iso-pro:hover span:nth-child(2) {
-    opacity: 0.4;
-    transform: translate(5px, -5px);
-}
-
-.iso-pro:hover span:nth-child(3) {
-    opacity: 0.6;
-    transform: translate(10px, -10px);
-}
-
-/* Adaptations des couleurs des icônes */
-.fa-tiktok:hover {
-    color: #000000;
-}
-
-.fa-facebook-f:hover {
-    color: #1877f2;
-}
-
-.fa-whatsapp:hover {
-    color: #25D366;
+a:hover span {
+    opacity: 1 !important;
 }
 </style>

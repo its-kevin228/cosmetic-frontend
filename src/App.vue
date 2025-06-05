@@ -11,13 +11,13 @@
         <!-- Navbar fixe -->
         <AppNavbar class="fixed top-0 left-0 w-full z-50 bg-white" />
 
-        <!-- Contenu principal espacé -->
+        <!-- Contenu principal avec animations AOS -->
         <main class="pt-28 pb-12 px-4 md:px-12 lg:px-20">
-          <HeroHome />
-          <ProductsView />
-          <AboutView />
-          <ContactView />
-          <FooterView />
+          <HeroHome data-aos="fade-up" data-aos-duration="600" />
+          <ProductsView data-aos="fade-up" data-aos-duration="600" data-aos-delay="100" />
+          <AboutView data-aos="fade-up" data-aos-duration="600" data-aos-delay="200" />
+          <ContactView data-aos="fade-up" data-aos-duration="600" data-aos-delay="300" />
+          <FooterView data-aos="fade-up" data-aos-duration="600" data-aos-delay="400" />
         </main>
       </div>
     </Transition>
@@ -32,18 +32,30 @@ import ProductsView from './components/ProductsView.vue';
 import AboutView from './components/AboutView.vue';
 import ContactView from './components/ContactView.vue';
 import FooterView from './components/FooterView.vue';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const isLoading = ref(true);
 
 onMounted(() => {
+  // Initialisation de AOS après le chargement
   setTimeout(() => {
     isLoading.value = false;
+
+    AOS.init({
+      // Configuration globale de AOS
+      duration: 600, // Durée par défaut des animations
+      easing: 'ease-in-out', // Type d'animation
+      once: false, // Si true, l'animation ne se joue qu'une fois
+      offset: 120, // Déclenche l'animation plus tôt (en px)
+      delay: 100, // Délai par défaut entre les animations
+    });
   }, 3000);
 });
 </script>
 
 <style scoped>
-/* Loader */
+/* Vos styles existants pour le loader */
 .loader-container {
   position: fixed;
   inset: 0;
@@ -119,7 +131,7 @@ onMounted(() => {
   }
 }
 
-/* Transition */
+/* Transition d'entrée */
 .fade-in-enter-active {
   transition: all 0.8s ease;
 }
