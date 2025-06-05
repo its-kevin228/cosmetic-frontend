@@ -82,17 +82,17 @@
         <transition name="fade-slide">
             <div v-if="isMenuOpen" class="sm:hidden bg-white px-4 pb-4 space-y-4 font-semibold shadow-md text-lg">
                 <a href="#"
-                    class="block py-3 text-gray-800 hover:text-orange-500 transition hover:pl-2 flex items-center">
+                    class="block py-3 text-gray-800 hover:text-orange-500 transition hover:pl-2 items-center">
                     <HomeIcon class="mr-3 h-5 w-5 text-orange-500" />
                     Accueil
                 </a>
                 <a href="#"
-                    class="block py-3 text-gray-800 hover:text-orange-500 transition hover:pl-2 flex items-center">
+                    class="block py-3 text-gray-800 hover:text-orange-500 transition hover:pl-2 items-center">
                     <ShoppingBagIcon class="mr-3 h-5 w-5 text-orange-500" />
                     Produits
                 </a>
                 <a href="#"
-                    class="block py-3 text-gray-800 hover:text-orange-500 transition hover:pl-2 flex items-center">
+                    class="block py-3 text-gray-800 hover:text-orange-500 transition hover:pl-2 items-center">
                     <InformationCircleIcon class="mr-3 h-5 w-5 text-orange-500" />
                     À propos
                 </a>

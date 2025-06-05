@@ -3,21 +3,21 @@
   "featured":[
     {
     "id": 1,
-    "nom": "Soins naturels préférés de notre fondatrice",
+    "nom": "Soin Bio",
     "link": "/images/i19.jpeg",
     "prix": "5 500 FCFA",
     "category": "Soins visage"
   },
   {
     "id": 2,
-    "nom": "Soins de la peau",
+    "nom": "Crème Hydratante",
     "link": "/images/i21.jpeg",
     "prix": "4 200 FCFA",
     "category": "Soins visage"
   },
   {
     "id": 3,
-    "nom": "Maquillage",
+    "nom": "Kit Beauté",
     "link": "/images/i22.jpeg",
     "prix": "3 800 FCFA",
     "category": "Maquillage"
@@ -27,140 +27,140 @@
   "products":[
     {
     "id": 2,
-    "nom": "rangement maquillage",
+    "nom": "Boîte Rangement",
     "link": "/images/i2.jpeg",
     "prix": "4 000 FCFA",
     "category": "Accessoires"
   },
   {
     "id": 3,
-    "nom": "Mockup de flacons",
+    "nom": "Flacons Design",
     "link": "/images/i3.jpeg",
     "prix": "6 500 FCFA",
     "category": "Accessoires"
   },
   {
     "id": 4,
-    "nom": "Nettoyant visage",
+    "nom": "Nettoyant Doux",
     "link": "/images/i4.jpeg",
     "prix": "3 800 FCFA",
     "category": "Soins visage"
   },
   {
     "id": 5,
-    "nom": "BeShop - Template eCommerce beauté React Next JS",
+    "nom": "Kit Digital",
     "link": "/images/i5.jpeg",
     "prix": "9 000 FCFA",
     "category": "Accessoires"
   },
   {
     "id": 6,
-    "nom": "Speick Sun – Soin solaire minéral sans effet blanc",
+    "nom": "Protection Solaire",
     "link": "/images/i6.jpeg",
     "prix": "5 000 FCFA",
     "category": "Soins visage"
   },
   {
     "id": 7,
-    "nom": "Gel douche doux 'ALMA' de Conseda Cosmetics",
+    "nom": "Gel Douche",
     "link": "/images/i7.jpeg",
     "prix": "3 500 FCFA",
     "category": "Soins visage"
   },
   {
     "id": 8,
-    "nom": "Rapport beauté d'octobre avec Perricone MD, BH Cosmetics, BECCA & plus",
+    "nom": "Palette Premium",
     "link": "/images/i8.jpeg",
     "prix": "7 200 FCFA",
     "category": "Maquillage"
   },
   {
     "id": 9,
-    "nom": "Photographie publicitaire de flacon de parfum",
+    "nom": "Parfum Élégant",
     "link": "/images/i9.jpeg",
     "prix": "8 000 FCFA",
     "category": "Accessoires"
   },
   {
     "id": 10,
-    "nom": "Photographie de produit de soin sur pierre",
+    "nom": "Crème Minérale",
     "link": "/images/i10.jpeg",
     "prix": "5 200 FCFA",
     "category": "Soins visage"
   },
   {
     "id": 11,
-    "nom": "12 nouveaux produits de soin pour un été éclatant",
+    "nom": "Soins Été",
     "link": "/images/i11.jpeg",
     "prix": "6 000 FCFA",
     "category": "Soins visage"
   },
   {
     "id": 12,
-    "nom": "Favoris de vitamine C de Cindy Claudia",
+    "nom": "Vitamine C",
     "link": "/images/i12.jpeg",
     "prix": "4 800 FCFA",
     "category": "Soins visage"
   },
   {
     "id": 13,
-    "nom": "Routine de soins corporels par Kerriii",
+    "nom": "Soins Corps",
     "link": "/images/i13.jpeg",
     "prix": "5 700 FCFA",
     "category": "Soins visage"
   },
   {
     "id": 14,
-    "nom": "22 rouges à lèvres rouges préférés des éditeurs d'Allure",
+    "nom": "Rouge Intense",
     "link": "/images/i14.jpeg",
     "prix": "3 000 FCFA",
     "category": "Maquillage"
   },
   {
     "id": 15,
-    "nom": "Mousse nettoyante HOLACEUTICAS sur Behance",
+    "nom": "Mousse Nettoyante",
     "link": "/images/i15.jpeg",
     "prix": "4 500 FCFA",
     "category": "Soins visage"
   },
   {
     "id": 16,
-    "nom": "Obtenez une peau éclatante avec Bio-Oil",
+    "nom": "Huile Bio",
     "link": "/images/i16.jpeg",
     "prix": "5 300 FCFA",
     "category": "Soins visage"
   },
   {
     "id": 17,
-    "nom": "Éclat sain avec l'hydratation : écran solaire teinté CeraVe SPF 30",
+    "nom": "Écran Teinté",
     "link": "/images/i17.jpeg",
     "prix": "4 900 FCFA",
     "category": "Soins visage"
   },
   {
     "id": 18,
-    "nom": "Désinfectants pour les mains Bisleri - Achetez en ligne",
+    "nom": "Gel Antibactérien",
     "link": "/images/i18.jpeg",
     "prix": "2 500 FCFA",
     "category": "Accessoires"
   },
   {
     "id": 19,
-    "nom": "korean skincare",
+    "nom": "Soin Coréen",
     "link": "/images/i19.jpeg",
     "prix": "6 800 FCFA",
     "category": "Soins visage"
   },
   {
     "id": 20,
-    "nom": "Cerva hyfratatoin",
+    "nom": "Crème Cerave",
     "link": "/images/i20.jpeg",
     "prix": "5 100 FCFA",
     "category": "Soins visage"
   },
   {
     "id": 21,
-    "nom": "Mascara",
+    "nom": "Mascara Volumisant",
     "link": "/images/i9.jpeg",
     "prix": "3 300 FCFA",
     "category": "Maquillage"
