@@ -1,18 +1,18 @@
 <template>
   <div class="scroll-container">
-    <section id="home" class="section" ref="homeSection">
+    <section id="home" class="section" ref="homeSection" data-aos="fade-up">
       <HeroHome />
     </section>
 
-    <section id="products" class="section" ref="productsSection">
+    <section id="products" class="section" ref="productsSection" data-aos="fade-up" data-aos-delay="100">
       <ProductsView />
     </section>
 
-    <section id="about" class="section" ref="aboutSection">
+    <section id="about" class="section" ref="aboutSection" data-aos="fade-up" data-aos-delay="100">
       <AboutView />
     </section>
 
-    <section id="contact" class="section" ref="contactSection">
+    <section id="contact" class="section" ref="contactSection" data-aos="fade-up" data-aos-delay="100">
       <ContactView />
     </section>
   </div>
@@ -25,6 +25,7 @@ import HeroHome from './HeroHome.vue';
 import ProductsView from './ProductsView.vue';
 import AboutView from './AboutView.vue';
 import ContactView from './ContactView.vue';
+import AOS from 'aos';
 
 const router = useRouter();
 const route = useRoute();
@@ -38,7 +39,7 @@ const contactSection = ref<HTMLElement | null>(null);
 // État pour éviter les boucles d'événements
 let isScrollingProgrammatically = false;
 
-// Fonction simple pour obtenir la section à partir du chemin
+// Fonction pour obtenir la section à partir du chemin
 function getSectionFromPath(path: string) {
   if (path === '/') return 'home';
   return path.substring(1); // Enlever le slash initial
@@ -70,8 +71,9 @@ function scrollToSection(sectionName: string) {
   if (targetElement) {
     targetElement.scrollIntoView({ behavior: 'smooth' });
     
-    // Réinitialiser l'état après l'animation
+    // Réinitialiser l'état et rafraîchir AOS après l'animation
     setTimeout(() => {
+      AOS.refresh(); // Rafraîchir les animations AOS
       isScrollingProgrammatically = false;
     }, 1000);
   } else {
@@ -83,7 +85,6 @@ function scrollToSection(sectionName: string) {
 // Observer pour détecter quelle section est visible
 function setupIntersectionObserver() {
   const observer = new IntersectionObserver((entries) => {
-    // Ne pas réagir si on est en train de défiler programmatiquement
     if (isScrollingProgrammatically) return;
     
     for (const entry of entries) {
@@ -91,18 +92,21 @@ function setupIntersectionObserver() {
         const sectionId = entry.target.id;
         const currentPath = sectionId === 'home' ? '/' : `/${sectionId}`;
         
-        // Mettre à jour l'URL si nécessaire
         if (route.path !== currentPath) {
           router.push(currentPath).catch(() => {});
+          
+          // Rafraîchir AOS pour les nouveaux éléments visibles
+          setTimeout(() => {
+            AOS.refresh();
+          }, 100);
         }
-        break; // Ne traiter que la première section visible
+        break;
       }
     }
   }, { threshold: 0.5 });
   
-  // Observer toutes les sections
   [homeSection.value, productsSection.value, aboutSection.value, contactSection.value]
-    .filter(Boolean) // Éliminer les valeurs null/undefined
+    .filter(Boolean)
     .forEach(section => observer.observe(section as HTMLElement));
   
   return observer;
@@ -110,29 +114,33 @@ function setupIntersectionObserver() {
 
 // Surveiller les changements de route
 watch(() => route.path, (newPath) => {
-  // Ne pas réagir aux changements d'URL pendant le défilement programmatique
   if (!isScrollingProgrammatically) {
     const sectionName = getSectionFromPath(newPath);
     scrollToSection(sectionName);
   }
 });
 
-// Variables pour stocker les références d'observateur et de surveillance
 let observer: IntersectionObserver | undefined;
 
 onMounted(() => {
-  // Configurer l'observateur après que les éléments sont montés
+  // Initialiser AOS si ce n'est pas déjà fait dans App.vue
+  AOS.init({
+    duration: 600,
+    easing: 'ease-in-out',
+    once: false, // Permet aux animations de se répéter à chaque scroll
+    mirror: true, // Animations en sortant du viewport aussi
+  });
+  
   observer = setupIntersectionObserver();
   
   // Défiler vers la section initiale après un court délai
   setTimeout(() => {
     const initialSection = getSectionFromPath(route.path);
     scrollToSection(initialSection);
-  }, 100);
+  }, 300);
 });
 
 onUnmounted(() => {
-  // Nettoyer l'observateur à la démontage
   if (observer) {
     observer.disconnect();
   }
@@ -142,7 +150,7 @@ onUnmounted(() => {
 <style scoped>
 .section {
   min-height: 100vh;
-  scroll-margin-top: 80px; /* Ajuster selon la hauteur de votre navbar */
+  scroll-margin-top: 80px;
   padding: 20px 0;
 }
 
