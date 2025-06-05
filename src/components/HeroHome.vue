@@ -17,9 +17,9 @@
           <p class="text-lg sm:text-xl md:text-xl text-gray-600 max-w-md sm:max-w-lg">
             <i>Offrez à votre routine beauté la qualité qu'elle mérite.</i>
           </p>
-          <button class="bg-black text-white px-6 py-3 sm:px-7 sm:py-4 rounded-full font-semibold inline-flex items-center w-fit hover:-translate-y-1 transition-transform duration-200 mt-4 sm:mt-6 text-lg sm:text-xl">
+          <router-link to="/products" class="bg-black text-white px-6 py-3 sm:px-7 sm:py-4 rounded-full font-semibold inline-flex items-center w-fit hover:-translate-y-1 transition-transform duration-200 mt-4 sm:mt-6 text-lg sm:text-xl">
             Découvrez nos Produits <span class="ml-3">→</span>
-          </button>
+          </router-link>
         </div>
 
         <!-- Petites images - Version desktop (toujours visible) -->
@@ -72,6 +72,7 @@
 </template>
 <script>
 import productData from '../data/images.json';
+import { useRouter } from 'vue-router';
 
 export default {
   name: 'HeroHome',
