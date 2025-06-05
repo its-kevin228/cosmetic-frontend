@@ -34,6 +34,9 @@
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 ]">
                 {{ category }}
+                <span v-if="getCategoryCount(category) > 0" class="ml-2 text-xs bg-gray-200 rounded-full px-2 py-1">
+                    {{ getCategoryCount(category) }}
+                </span>
             </button>
         </div>
 
@@ -86,4 +89,12 @@ const displayedProducts = computed(() => {
 
     return showAll.value ? products : products.slice(0, 8);
 });
+
+// Fonction pour compter les produits par catégorie
+function getCategoryCount(category) {
+  if (category === 'Tous les produits') {
+    return allProducts.value.length;
+  }
+  return allProducts.value.filter(product => product.category === category).length;
+}
 </script>
