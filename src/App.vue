@@ -1,3 +1,4 @@
+// filepath: c:\Users\micro\OneDrive\Documents\cosmetics\src\App.vue
 <template>
   <div class="font-sans relative">
     <!-- Loader -->
@@ -11,26 +12,25 @@
         <!-- Navbar fixe -->
         <AppNavbar class="fixed top-0 left-0 w-full z-50 bg-white" />
 
-        <!-- Contenu principal avec animations AOS -->
-        <main class="pt-28 pb-12 px-4 md:px-12 lg:px-20">
-          <HeroHome data-aos="fade-up" data-aos-duration="600" />
-          <ProductsView data-aos="fade-up" data-aos-duration="600" data-aos-delay="100" />
-          <AboutView data-aos="fade-up" data-aos-duration="600" data-aos-delay="200" />
-          <ContactView data-aos="fade-up" data-aos-duration="600" data-aos-delay="300" />
-          <FooterView data-aos="fade-up" data-aos-duration="600" data-aos-delay="400" />
+        <!-- Router View - Affiche MainView qui contient toutes les sections -->
+        <main class="pt-20 pb-12">
+          <router-view v-slot="{ Component }">
+            <transition name="fade-page" mode="out-in">
+              <component :is="Component" />
+            </transition>
+          </router-view>
         </main>
+
+        <!-- Footer reste présent sur toutes les pages -->
+        <FooterView data-aos="fade-up" data-aos-duration="600" />
       </div>
     </Transition>
   </div>
 </template>
 
 <script lang="ts" setup>
-import HeroHome from './components/HeroHome.vue';
 import AppNavbar from './components/AppNavbar.vue';
 import { ref, onMounted } from 'vue';
-import ProductsView from './components/ProductsView.vue';
-import AboutView from './components/AboutView.vue';
-import ContactView from './components/ContactView.vue';
 import FooterView from './components/FooterView.vue';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
