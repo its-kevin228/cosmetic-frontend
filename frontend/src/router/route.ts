@@ -28,7 +28,6 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
   scrollBehavior() {
-    // Désactiver le comportement de défilement par défaut
     return false;
   },
 });

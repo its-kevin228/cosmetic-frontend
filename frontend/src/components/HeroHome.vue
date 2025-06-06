@@ -22,7 +22,7 @@
           </p>
         </div>
 
-        <!-- Bloc promotion déplacé ici, en haut, bien espacé -->
+        <!-- Bloc-->
         <div
           class="mt-8 mb-10 w-full max-w-md relative bg-white/20 backdrop-blur-xl border border-white/30 rounded-3xl shadow-2xl overflow-hidden group transform transition-all duration-500 hover:scale-[1.03] hover:shadow-orange-300/80 hover:rotate-[0.5deg]">
           <div
@@ -135,7 +135,7 @@ export default {
 </script>
 
 <style>
-/* Animations inchangées */
+
 @keyframes revealText {
   0% {
     opacity: 0;
@@ -222,24 +222,24 @@ export default {
   animation: pulseLine 3s ease-in-out infinite;
 }
 
-/* Forcer le comportement cohérent des vidéos */
+
 video {
-  display: block;  /* Élimine l'espace réservé sous les vidéos */
+  display: block;
 }
 
-/* Assurer que les conteneurs vidéo ont un comportement prévisible */
+
 .video-container {
   position: relative;
   overflow: hidden;
 }
 
-/* Précharger la vidéo pour éviter les changements de layout */
+
 video[autoplay] {
   will-change: transform;
 }
 
-/* Corriger les problèmes potentiels de mise en page */
-@media (min-width: 1024px) {  /* lg */
+
+@media (min-width: 1024px) {  
   .lg\:justify-end {
     justify-content: flex-end !important;
   }

@@ -9,7 +9,7 @@
             </p>
         </div>
 
-        <!-- Produits vedettes - Boucle sur les 3 premiers produits (sans bouton) -->
+        <!-- Produits vedettes - Boucle sur les 3 premiers produits -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div v-for="(product, index) in featuredProducts" :key="product.id"
                 class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 group">
@@ -28,7 +28,7 @@
             </div>
         </div>
 
-        <!-- Filtres (optionnel, à adapter selon vos catégories réelles) -->
+        <!-- Filtres -->
         <div class="flex flex-wrap gap-4 mb-8">
             <button v-for="category in categories" :key="category"
                 @click="selectedCategory = category === selectedCategory ? 'Tous les produits' : category" :class="[
@@ -49,7 +49,7 @@
             </button>
         </div>
 
-        <!-- Grille de produits (sans icône panier) -->
+        <!-- Grille de produits  -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             <div v-for="product in displayedProducts" :key="product.id"
                 class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 group">
@@ -68,7 +68,7 @@
             </div>
         </div>
 
-        <!-- Bouton "Show all Products" -->
+        <!-- Bouton pour afficher plus ou moins de produits -->
         <div class="mt-12 text-center">
             <button @click="showAll = !showAll"
                 class="text-orange-500 font-medium hover:underline transition-all duration-300 transform hover:translate-x-1 inline-flex items-center">
@@ -93,7 +93,7 @@ const featuredProducts = ref(productsData.featured);
 // Tous les produits
 const allProducts = ref(productsData.products);
 
-// Catégories (à adapter selon vos besoins)
+// Catégories 
 const categories = ['Tous les produits', 'Soins visage', 'Maquillage', 'Accessoires'];
 const selectedCategory = ref('Tous les produits');
 

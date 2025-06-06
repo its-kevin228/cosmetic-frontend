@@ -21,7 +21,7 @@
           </router-view>
         </main>
 
-        <!-- Footer reste présent sur toutes les pages -->
+        <!-- Footer -->
         <FooterView data-aos="fade-up" data-aos-duration="600" />
       </div>
     </Transition>
@@ -44,18 +44,18 @@ onMounted(() => {
 
     AOS.init({
       // Configuration globale de AOS
-      duration: 600, // Durée par défaut des animations
-      easing: 'ease-in-out', // Type d'animation
-      once: false, // Si true, l'animation ne se joue qu'une fois
-      offset: 120, // Déclenche l'animation plus tôt (en px)
-      delay: 100, // Délai par défaut entre les animations
+      duration: 600, 
+      easing: 'ease-in-out', 
+      once: false, 
+      offset: 120, 
+      delay: 100, 
     });
   }, 3000);
 });
 </script>
 
 <style scoped>
-/* Vos styles existants pour le loader */
+
 .loader-container {
   position: fixed;
   inset: 0;

@@ -42,7 +42,7 @@ let isScrollingProgrammatically = false;
 // Fonction pour obtenir la section à partir du chemin
 function getSectionFromPath(path: string) {
   if (path === '/') return 'home';
-  return path.substring(1); // Enlever le slash initial
+  return path.substring(1); 
 }
 
 // Fonction pour défiler vers une section spécifique
@@ -73,7 +73,7 @@ function scrollToSection(sectionName: string) {
     
     // Réinitialiser l'état et rafraîchir AOS après l'animation
     setTimeout(() => {
-      AOS.refresh(); // Rafraîchir les animations AOS
+      AOS.refresh(); 
       isScrollingProgrammatically = false;
     }, 1000);
   } else {
@@ -127,11 +127,11 @@ onMounted(() => {
   window.addEventListener('load', () => {
     // Initialiser AOS avec des paramètres optimisés
     AOS.init({
-      duration: 800, // Durée plus longue pour des transitions plus douces
+      duration: 800, 
       easing: 'ease-in-out',
       once: false,
       mirror: true,
-      delay: 100, // Petit délai global
+      delay: 100, 
     });
     
     // Configurer l'observer après AOS pour éviter les conflits
@@ -172,10 +172,10 @@ html, body {
 }
 
 [data-aos] {
-  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); /* Easing plus doux */
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); 
 }
 
-/* Animation progressive des sections visibles */
+
 section {
   transition: opacity 0.5s ease-out;
 }

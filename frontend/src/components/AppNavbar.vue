@@ -157,19 +157,19 @@
         <transition name="fade-slide">
             <div v-if="isMenuOpen" class="sm:hidden bg-white px-4 pb-4 space-y-4 font-semibold shadow-md text-lg">
                 <router-link to="/"
-                    class="block py-3 text-gray-800 hover:text-orange-500 transition hover:pl-2 flex items-center"
+                    class="block py-3 text-gray-800 hover:text-orange-500 transition hover:pl-2 items-center"
                     @click="closeMenu">
                     <HomeIcon class="mr-3 h-5 w-5 text-orange-500" />
                     Accueil
                 </router-link>
                 <router-link to="/products"
-                    class="block py-3 text-gray-800 hover:text-orange-500 transition hover:pl-2 flex items-center"
+                    class="block py-3 text-gray-800 hover:text-orange-500 transition hover:pl-2 items-center"
                     @click="closeMenu">
                     <ShoppingBagIcon class="mr-3 h-5 w-5 text-orange-500" />
                     Produits
                 </router-link>
                 <router-link to="/about"
-                    class="block py-3 text-gray-800 hover:text-orange-500 transition hover:pl-2 flex items-center"
+                    class="block py-3 text-gray-800 hover:text-orange-500 transition hover:pl-2 items-center"
                     @click="closeMenu">
                     <InformationCircleIcon class="mr-3 h-5 w-5 text-orange-500" />
                     À propos
@@ -222,7 +222,7 @@ const filteredProducts = computed(() => {
     return allProducts.filter(product => {
         return product.nom.toLowerCase().includes(query) ||
                (product.category && product.category.toLowerCase().includes(query))
-    }).slice(0, 8) // Limiter à 8 résultats pour l'affichage
+    }).slice(0, 8)
 })
 
 const filteredMobileProducts = computed(() => {
@@ -232,7 +232,7 @@ const filteredMobileProducts = computed(() => {
     return allProducts.filter(product => {
         return product.nom.toLowerCase().includes(query) ||
                (product.category && product.category.toLowerCase().includes(query))
-    }).slice(0, 5) // Limiter à 5 résultats pour mobile
+    }).slice(0, 5)
 })
 
 // Gestion des classes pour les catégories
