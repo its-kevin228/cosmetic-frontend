@@ -26,6 +26,8 @@ Une boutique en ligne élégante pour produits cosmétiques développée avec Vu
 
 ## Difficultés techniques et solutions
 
+        ### Chargement vidéo et problèmes de disposition
+        
 ### Navigation hybride (scroll et routing)
 
 L'un des défis majeurs de ce projet était d'implémenter une navigation à la fois par défilement et par clic sur les onglets. La difficulté résidait dans la synchronisation entre:
