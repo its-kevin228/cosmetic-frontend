@@ -72,7 +72,7 @@
         <div class="mt-12 text-center">
             <button @click="showAll = !showAll"
                 class="text-orange-500 font-medium hover:underline transition-all duration-300 transform hover:translate-x-1 inline-flex items-center">
-                {{ showAll ? 'Show less' : 'voir tous les produits' }}
+                {{ showAll ? 'voir moins' : 'voir tous les produits' }}
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1 transition-transform duration-300"
                     fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
