@@ -9,7 +9,7 @@ Une boutique en ligne élégante pour produits cosmétiques développée avec Vu
 - **Vite** - Outil de build ultra-rapide
 - **Tailwind CSS** - Utilitaire CSS pour un design flexible
 - **Vue Router** - Gestion du routage et navigation fluide
-- **Heroicons** - Bibliothèque d'icône
+- **Heroicons** - Bibliothèque d'icônes
 
 # Cosmetics Boutique
 
