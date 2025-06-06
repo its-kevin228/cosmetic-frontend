@@ -156,6 +156,13 @@ onUnmounted(() => {
 
 .scroll-container {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow : visible;
+  position: relative;
+  width: 100%;
+}
+
+html, body {
+ overflow-x: hidden;
+ overflow-y: auto;
 }
 </style>
