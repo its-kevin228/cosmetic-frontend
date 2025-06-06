@@ -114,7 +114,7 @@
                             </div>
                             <div>
                                 <h3 class="text-lg font-medium mb-1">Horaires</h3>
-                                <p class="text-gray-600">Lun - Ven: 9h - 18h<br>Sam: 10h - 16h<br>Dim: Fermé</p>
+                                <p class="text-gray-600">Lundi - Vendredi: 9h - 18h<br>Samedi: 10h - 16h<br>Dimanche: Fermé</p>
                             </div>
                         </div>
                     </div>

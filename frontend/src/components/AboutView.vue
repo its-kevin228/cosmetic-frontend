@@ -44,7 +44,7 @@
                 90%</div>
               <div class="text-gray-800 font-medium uppercase text-sm tracking-wide">Naturel</div>
             </div>
-            <p class="text-gray-600 text-sm">Ingrédients d'origine naturelle issus de sources durables</p>
+            <p class="text-gray-600 text-sm">Ingrédients d'origine naturelle</p>
             <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-orange-400" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
