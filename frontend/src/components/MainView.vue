@@ -123,21 +123,26 @@ watch(() => route.path, (newPath) => {
 let observer: IntersectionObserver | undefined;
 
 onMounted(() => {
-  // Initialiser AOS si ce n'est pas déjà fait dans App.vue
-  AOS.init({
-    duration: 600,
-    easing: 'ease-in-out',
-    once: false, // Permet aux animations de se répéter à chaque scroll
-    mirror: true, // Animations en sortant du viewport aussi
+  // Attendre le chargement complet de la page pour une animation fluide
+  window.addEventListener('load', () => {
+    // Initialiser AOS avec des paramètres optimisés
+    AOS.init({
+      duration: 800, // Durée plus longue pour des transitions plus douces
+      easing: 'ease-in-out',
+      once: false,
+      mirror: true,
+      delay: 100, // Petit délai global
+    });
+    
+    // Configurer l'observer après AOS pour éviter les conflits
+    observer = setupIntersectionObserver();
+    
+    // Délai légèrement plus long pour permettre le rendu complet des éléments
+    setTimeout(() => {
+      const initialSection = getSectionFromPath(route.path);
+      scrollToSection(initialSection);
+    }, 500);
   });
-  
-  observer = setupIntersectionObserver();
-  
-  // Défiler vers la section initiale après un court délai
-  setTimeout(() => {
-    const initialSection = getSectionFromPath(route.path);
-    scrollToSection(initialSection);
-  }, 300);
 });
 
 onUnmounted(() => {
@@ -164,5 +169,14 @@ onUnmounted(() => {
 html, body {
  overflow-x: hidden;
  overflow-y: auto;
+}
+
+[data-aos] {
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); /* Easing plus doux */
+}
+
+/* Animation progressive des sections visibles */
+section {
+  transition: opacity 0.5s ease-out;
 }
 </style>
