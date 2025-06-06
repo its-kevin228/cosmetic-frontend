@@ -83,17 +83,24 @@
           </div>
         </div>
 
-        <div class="w-full h-[400px] sm:h-[450px] md:h-[500px] flex items-center justify-center">
-          <video autoplay muted loop playsinline class="w-full h-full object-cover z-10 rounded-xl">
+        <!-- Conteneur vidéo mobile -->
+        <div class="w-full h-[400px] sm:h-[450px] md:h-[500px] flex items-center justify-center overflow-hidden"
+             style="contain: layout; position: relative;">
+          <video autoplay muted loop playsinline
+                 style="width: 100%; height: 100%; object-fit: cover; position: absolute;"
+                 class="rounded-xl">
             <source src="/video/v2.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
 
       <!-- Vidéo desktop -->
-      <div class="hidden lg:flex w-full lg:w-1/2 h-full items-center justify-center lg:justify-end">
+      <div class="hidden lg:flex w-full lg:w-1/2 h-full items-center justify-center lg:justify-end overflow-hidden"
+           style="contain: layout; position: relative;">
         <div class="w-full h-[450px] lg:h-[500px] xl:h-full flex items-center justify-center">
-          <video autoplay muted loop playsinline class="max-w-full max-h-full object-contain z-10">
+          <video autoplay muted loop playsinline
+                 style="max-width: 100%; max-height: 100%; object-fit: contain;"
+                 class="z-10">
             <source src="/video/v2.mp4" type="video/mp4" />
           </video>
         </div>
@@ -213,5 +220,28 @@ export default {
   height: 1px;
   background: linear-gradient(90deg, transparent, #fb923c, transparent);
   animation: pulseLine 3s ease-in-out infinite;
+}
+
+/* Forcer le comportement cohérent des vidéos */
+video {
+  display: block;  /* Élimine l'espace réservé sous les vidéos */
+}
+
+/* Assurer que les conteneurs vidéo ont un comportement prévisible */
+.video-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Précharger la vidéo pour éviter les changements de layout */
+video[autoplay] {
+  will-change: transform;
+}
+
+/* Corriger les problèmes potentiels de mise en page */
+@media (min-width: 1024px) {  /* lg */
+  .lg\:justify-end {
+    justify-content: flex-end !important;
+  }
 }
 </style>
